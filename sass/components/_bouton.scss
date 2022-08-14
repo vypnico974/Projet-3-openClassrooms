@@ -1,0 +1,31 @@
+.bouton {
+    font-family: "Roboto", "sans-serif";
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    color: #FFF;
+    border-radius: 5rem;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+    box-shadow: 0rem 0.2rem 0.5rem 0.1rem #d5d5d5;
+    background: #9356DC;
+    background: linear-gradient(-10deg, #9356DC 25%, #FF79DA 100%);
+    /* Au survol, la couleur de fond du boouton s’éclaircie  légèrement.  L’ombre portée est  plus visible. */
+     &:hover {
+        @extend %hover-btn;
+    }
+  }
+
+@mixin btn-nouveau {
+    content: 'Nouveau';
+    position: absolute;
+    padding: 0.5rem;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 0.8rem;
+    color: darken($couleur-tertiaire, $amount: 50);
+    background-color: $couleur-tertiaire;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 0.25rem;
+  }

@@ -1,0 +1,56 @@
+.function {
+    background-color: $couleur-blanc;
+    margin: 1rem;
+    &__buttons {
+      counter-reset: steps;
+      display: flex;
+      gap: 2rem;
+      margin: 1.5rem;
+      
+      cursor: pointer;
+           @media (max-width:992px) {
+        flex-direction: column;
+       
+      }
+    }
+    
+  }
+  
+  .function__btn {
+    display: flex;
+    align-items: center;
+    background-color: $couleur-arriere-plan;
+    border-radius: 1.5rem;
+    flex-grow: 1;
+    padding: 1.5rem 0;
+    width: 100%;
+    @include base-shadow;
+    &:hover {
+        transition: all 80ms ease-in;
+        @include btn-lighten;
+          & > i {
+              transition: all 80ms ease-in;
+              color:darken($color: $couleur-primaire, $amount: 15);
+          }
+          @extend %hover-btn; 
+      }
+     
+    &::before {
+        counter-increment: steps;
+        content: counter(steps);
+        position: relative;
+        left: -0.8rem;
+        color: #FFF;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #9356DC;
+        border-radius: 50%;
+    
+      @extend %centrer_flex;
+    }
+      & i {
+        color: grey;
+        padding: 0 1rem;
+        font-size: 1.5rem;
+      }
+  }

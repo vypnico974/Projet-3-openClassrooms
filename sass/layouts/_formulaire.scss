@@ -1,0 +1,42 @@
+
+/* moteur de recherche */
+.recherche{
+    width: 100%;
+    width: 100%;
+    height: 327px;
+    position: relative;
+    background-color: $couleur-arriere-plan;
+    margin: 0px auto;
+    text-align: center;
+    &--zone{ 
+        width: 100%;
+        height: 50px;
+        display: block;
+        margin: 0 auto;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        box-shadow: inset 0px 2px 3px $ombre;
+        background-color: rgb(231, 231, 231);
+        color: $couleur-encre;
+        text-align: center;
+    }
+    &__localisation{         
+        position: absolute;
+        left: 30vw;
+        top: 15px;
+    }
+    &__titre{
+        margin: 25px 15% 0 15%;
+    } 
+    &__texte{
+        margin: 15px 10% 0 10%;
+        font-size: 1.02rem;
+        font-weight: 300;
+    }
+    
+}
+
+
+
+

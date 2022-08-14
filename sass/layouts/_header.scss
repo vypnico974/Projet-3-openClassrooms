@@ -1,0 +1,18 @@
+// en-tête //
+
+.entete {
+    margin: 0;
+    position: relative;
+    background-color: $couleur_blanc;    
+    &__logo {
+      @extend %centrer_flex;
+      margin: 0;
+      padding:$marge_section;
+      box-shadow: 0vw 0vw 0.5vw #919191;
+      & img {
+        width: 190px;
+      }
+    }
+  }
+  
+  

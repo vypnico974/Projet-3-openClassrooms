@@ -1,10 +1,18 @@
 @import "./utils/_variables";
 @import "./utils/placeholder";
+@import "./utils/mixin";
+
+@import "./components/bouton";
+@import "./components/chargement";
+@import "./components/fonctionnement";
+
 @import "./base/_animations";
 @import "./base/base.scss";
 
-@import "./components/chargement";
 @import "./layouts/header";
+@import "./layouts/formulaire";
+@import "./layouts/restaurant";
+@import "./layouts/footer";
 
 
 

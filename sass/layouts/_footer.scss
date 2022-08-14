@@ -1,0 +1,27 @@
+footer {
+    background-color: #353535;
+    color: $couleur-blanc;
+    padding: $marge-footer 0 $marge-footer $marge-footer;
+   
+    & ul {
+      margin-top:1rem;
+      padding: 0;
+      list-style-type: none;
+    }
+    & li {
+      padding: 0.2rem;
+    }
+    & i 
+    {
+      padding-right:0.2rem;
+    }
+    h3{
+        font-family:"Shrikhand", 'sans-serif';
+        font-size:1.2rem;
+      }
+    a:hover{
+        color: $couleur-primaire;
+        
+    }
+  }
+  

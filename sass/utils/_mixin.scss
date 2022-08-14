@@ -1,0 +1,14 @@
+@mixin base-shadow {
+    box-shadow: $btn-ombre $couleur-ombre;
+  }
+  
+  @mixin btn-lighten($color:$couleur-primaire) {
+    background-color: lighten($color: $couleur-primaire, $amount: 25)
+  }
+  
+  // Gradiant // 
+  @mixin gradient($degree) {
+    background: $couleur-primaire;
+    background:linear-gradient(($degree), $couleur-primaire 25%, $couleur-secondaire 100%);
+  }
+  

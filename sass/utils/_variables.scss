@@ -1,4 +1,50 @@
-// couleurs
+/*  couleurs  */
 $couleur-primaire: #9356DC;
 $couleur-secondaire: #FF79DA;
 $couleur-tertiaire: #99E2D0;
+$couleur-arriere-plan:#F6F6F6;
+$couleur-blanc:#FFF;
+
+/* typographie  */
+$h1-taille : 1.5rem;
+$h2-taille : 1.5rem;
+$base-size-type:1rem; 
+$h1-size:1.5rem;
+$h1-card-size:1.1rem;
+
+
+/* marge et espace entre ligne */
+$marge-section:1rem;
+$marge-footer:1rem;
+$espace-entre-ligne:25px;
+
+// shadow btn //
+$shadow-color:#D5D5D5;
+$btn_shadow: 0rem 0.2rem 0.5rem 0.1rem;
+
+// couleur background
+$couleur-bg: #FAFAFA;
+$coul-bg: #FFF;
+
+// couleur police
+$couleur-encre: #000;
+$couleur-encre-sec: #FFF;
+
+// couleur box-shadow
+$ombre: #b4b4b4;
+
+// taille police
+$size-un: 1rem;
+$size-deux: 1.5rem;
+$size-trois: 1.1rem;
+
+// media
+$tablet-iphone: 1023px;
+$desktop: 1024px;
+
+// pourcentage
+$pourcent: 5%;
+
+// ombre bouton //
+$couleur-ombre:#D5D5D5;
+$btn-ombre: 0rem 0.2rem 0.5rem 0.1rem;
