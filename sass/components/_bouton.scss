@@ -1,9 +1,9 @@
-.bouton {
+.bouton-principal {
     font-family: "Roboto", "sans-serif";
     font-size: 1rem;
     font-weight: 300;
     cursor: pointer;
-    color: #FFF;
+    color:$couleur-blanc;
     border-radius: 5rem;
     border: none;
     padding: 1rem 2rem;
@@ -11,7 +11,8 @@
     box-shadow: 0rem 0.2rem 0.5rem 0.1rem #d5d5d5;
     background: #9356DC;
     background: linear-gradient(-10deg, #9356DC 25%, #FF79DA 100%);
-    /* Au survol, la couleur de fond du boouton s’éclaircie  légèrement.  L’ombre portée est  plus visible. */
+    /* Au survol, la couleur de fond du boouton s’éclaircie  légèrement.
+    L’ombre portée est plus visible. */
      &:hover {
         @extend %hover-btn;
     }

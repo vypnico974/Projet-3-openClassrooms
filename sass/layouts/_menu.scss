@@ -1,0 +1,22 @@
+.arriere-plan__img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;   
+  }
+  .menu {
+    position: relative; /* pour décaler le conteneur sur l'image  */
+    margin-top:-5rem;  /* décaler le conteneur  */
+    border-radius: 2rem 2rem 0 0; /* bordure arrondi du cadre  */
+    background-color: $couleur-arriere-plan;  
+    font-size: $h1-taille;
+    &__header {
+      padding: 1rem 2rem 2rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    h4 {
+      font-size: $h1-taille;
+      font-family: 'Shrikhand','sans-serif';
+    } 
+}

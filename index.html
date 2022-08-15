@@ -11,15 +11,14 @@
     <script src="https://kit.fontawesome.com/0b6d538c32.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./public/img/utensils-solid.svg" />   
 </head>
-
 <body>
-    
+  <!--animation chargement-->
   <div class="chargement cacher">
         <div class="chargement__cercle--primaire"></div>
         <div class="chargement__cercle--secondaire"></div>
         <div class="chargement__cercle--tertiaire"></div>
   </div>
-
+  <!--en-tête-->
   <header>
       <div class="entete">
         <h1 class="entete__logo">
@@ -27,8 +26,8 @@
         </h1>
       </div>
   </header>
-
-  <main>
+  <!--partie principal-->
+  <main class="roboto">
     <!-- section recherche -->
     <section class="recherche">          
       <form >  
@@ -37,23 +36,23 @@
         <h1 class='recherche__titre'>Réservez le menu qui vous convient</h1> <!-- Mal fait ou dit. Le choix du menu est fait après le choix du restaurant -->
         <p class='recherche__texte'>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
         <!-- bouton de recherche-->
-        <input type='button' class="bouton" value="Explorer nos restaurants">
+        <input type='button' class="bouton-principal" value="Explorer nos restaurants">
         <span class='recherche__localisation'><i class="fas fa-map-marker-alt recherche__localisation--localisation"></i></span>
       </form>
     </section>
     <!-- section fonction -->    
-    <section class="function">
+    <section class="fonction">
       <h2>Fonctionnement</h2>
-      <ol class="function__buttons"> 
-        <li class="function__btn">
+      <ol class="fonction__buttons"> 
+        <li class="fonction__btn">
           <i class="fa-solid fa-mobile-screen-button"></i>
           <h3>Choisissez un restaurant</h3>
         </li>
-        <li class="function__btn">
+        <li class="fonction__btn">
           <i class="fa-solid fa-list"></i>
           <h3>Composez votre menu</h3>
         </li>
-        <li class="function__btn">
+        <li class="fonction__btn">
           <i class="fa-solid fa-shop"></i>
           <h3>Dégustez au restaurant</h3>
         </li>
@@ -121,17 +120,12 @@
   <!--pied de page-->
   <footer>
     <h3>ohmyfood</h3>
-    <ul class="footer__items">
+    <ul>
       <li><i class="fa solid fa-utensils"></i><a href="#">Proposer un Restaurant</a></li>
       <li><i class="fa solid fa-handshake-angle"></i><a href="#">Devenir partenaire</a></li> 
       <li><a href="#">Mentions légales</a></li>
       <li><a href="mailto:exemple@ohmyfood.fr">Contact</a></li>
     </ul>
   </footer>
-
-
-
-
 </body>
-
 </html>

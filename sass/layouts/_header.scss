@@ -12,7 +12,17 @@
       & img {
         width: 190px;
       }
-    }
+    } 
+    &__fleche {
+      position: absolute;
+      left: 2rem;
+      top:1.4rem;
+      font-size: 1.2rem;
+      &:hover{
+        color: $couleur-primaire;
+      }
+    }   
   }
-  
+
+
   

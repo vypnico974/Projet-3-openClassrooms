@@ -1,14 +1,27 @@
-@mixin base-shadow {
+/* ombre du conteneur   */
+@mixin ombre-conteneur {
     box-shadow: $btn-ombre $couleur-ombre;
-  }
-  
-  @mixin btn-lighten($color:$couleur-primaire) {
-    background-color: lighten($color: $couleur-primaire, $amount: 25)
-  }
-  
-  // Gradiant // 
-  @mixin gradient($degree) {
-    background: $couleur-primaire;
-    background:linear-gradient(($degree), $couleur-primaire 25%, $couleur-secondaire 100%);
-  }
+}
+/* couleur plus claire d’un certain montant exprimé en pourcentage  */
+@mixin btn-lighten($color:$couleur-primaire) {
+    background-color: lighten($color: $couleur-primaire, $amount: 25%)
+}
+ /* couleur dégradée de 2 couleurs exprimées en pourcentage de l'arrière-plan    */  
+@mixin gradient($degree) {
+  background: $couleur-primaire;
+  background:linear-gradient(($degree), $couleur-primaire 25%, $couleur-secondaire 100%);
+}
+/* padding */
+@mixin pad {
+  padding: 5px 0 0 0;
+}
+/* margin */
+@mixin margin {
+  margin: 0 0 0 0;
+}
+/* ombre arrondie du conteneur */
+@mixin ombre-ok{
+  box-shadow: 0px 5px 10px 0px $ombre-arrondie;
+}
+
   
