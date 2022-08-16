@@ -1,4 +1,4 @@
 *.tmp
 log.txt
 .sass-cache/
-node_modules/    
+node_modules/
