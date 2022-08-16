@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À la française</title>
+    <!-- fichiers CSS -->
+    <link rel="stylesheet" href="../../css/reset.css"> 
+    <link rel="stylesheet" href="../../css/style.css"> 
+    <!-- kit fontawesion pour import d'icône-->
+     <!-- kit fontawesion pour import d'icône-->
+     <script src="https://kit.fontawesome.com/0b6d538c32.js" crossorigin="anonymous"></script>
+     <link rel="icon" href="../img/utensils-solid.svg" />   
+</head>
+<body>
+
+   <!--en-tête-->
+    <header>
+        <div class="entete">
+            <h1 class="entete__logo">
+                <a href="../../index.html"><i class="fa-solid fa-arrow-left entete__fleche"></i></a>
+                <img src="../img/logo/ohmyfood.png" alt="Logo de l'entreprise commande de repas en ligne Ohmyfood' "/>
+            </h1>
+        </div>
+    </header>
+
+    <!--image arrière-plan-->
+    <img src="../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant À la française" class="arriere-plan__img">
+
+    
+    <main class="menu roboto">
+
+        <div class="menu__header">
+            <h4>À la française</h4>
+            <div class="icone-coeur">
+              <i class="fa-heart fas"></i>
+              <i class="fa-heart far"></i>
+            </div>
+        </div>
+
+         <!-- formulaire choix de plats -->
+         <form class='repas'>
+
+            <!-- titre des entrées -->
+            <h3 class="repas__titre">entrées<span class="repas__titre--barre"></span></h3> 
+
+            <!-- groupe des entrées -->
+            <fieldset class='repas__entrée'>
+
+                <!-- entrée 1 -->
+                <div class='repas__entrée--choix'>
+
+                    <!-- selection choix -->
+                    <input type="checkbox" name='menu_a_la_française' id='entrée1' class='selection'>
+                    <label for='entrée1' class='assiette assiette--un'>
+
+                        <!-- description entrée -->
+                        <span class='assiette__texte'>
+                            <span class='assiette__texte__menu' title="Tartare de poulpe acidulé">Tartare de poulpe acidulé</span>
+                            <span class='assiette__texte__menu' title="Aux zestes d'orange">Aux zestes d'orange</span>
+                        </span>
+                        <span class='assiette__prix'>25€</span>
+
+                        <!-- validation -->
+                        <span class='assiette--valide'>
+                            <i class="fas fa-check-circle assiette--valide--icone"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- entrée 2 -->
+                <div class='repas__entrée--choix'>
+
+                    <!-- selection choix -->
+                    <input type="checkbox" name='menu_a_la_française' id='entrée2' class='selection'>
+                    <label for='entrée2' class='assiette assiette--deux'>
+
+                        <!-- description entrée -->
+                        <span class='assiette__texte'>
+                            <span class='assiette__texte__menu' title="Velouté de légumes d'antan">Velouté de légumes d'antan</span>
+                            <span class='assiette__texte__menu' title="Carotte, panais, topinambour">Carotte, panais, topinambour</span>
+                        </span>
+                        <span class='assiette__prix'>35€</span>
+
+                        <!-- validation -->
+                        <span class='assiette--valide'>
+                            <i class="fas fa-check-circle assiette--valide--icone"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- entrée 3 -->
+                <div class='repas__entrée--choix'>
+
+                    <!-- selection choix -->
+                    <input type="checkbox" name='menu_a_la_française' id='entrée3' class='selection'>
+                    <label for='entrée3' class='assiette assiette--trois'>
+
+                        <!-- description entrée -->
+                        <span class='assiette__texte'>
+                            <span class='assiette__texte__menu' title="Soupe à l'oignon">Soupe à l'oignon</span>
+                            <span class='assiette__texte__menu' title="Revisitée">Revisitée</span>
+                        </span>
+                        <span class='assiette__prix'>20€</span>
+
+                        <!-- validation -->
+                        <span class='assiette--valide'>
+                            <i class="fas fa-check-circle assiette--valide--icone"></i>
+                        </span>
+                    </label>
+                </div>
+
+            </fieldset>
+            
+            <!-- titre des plats -->
+            <h3 class="repas__titre">plats<span class="repas__titre--barre"></span></h3>
+
+            <!-- groupe des plats -->
+            <fieldset class='repas__plat'>
+
+                <!-- plat 1 -->
+                <div class='repas__plat--choix'>
+
+                    <!-- selection choix -->
+                    <input type="checkbox" name='menu_a_la_française' id='plat1' class='selection'>
+                    <label for='plat1' class='assiette assiette--un'>
+
+                        <!-- description plat -->
+                        <span class='assiette__texte'>
+                            <span class='assiette__texte__menu' title="Coquilles Saint-Jacques">Coquilles Saint-Jacques</span>
+                            <span class='assiette__texte__menu' title="Accompagnées d'une purée de panais">Accompagnées d'une purée de panais</span>
+                        </span>
+                        <span class='assiette__prix'>40€</span>
+
+                        <!-- validation -->
+                        <span class='assiette--valide'>
+                            <i class="fas fa-check-circle assiette--valide--icone"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- plat 2 -->
+                <div class='repas__plat--choix'>
+
+                    <!-- selection choix -->
+                    <input type="checkbox" name='menu_a_la_française' id='plat2' class='selection'>
+                    <label for='plat2' class='assiette assiette--deux'>
+
+                        <!-- description plat -->
+                        <span class='assiette__texte'>
+                            <span class='assiette__texte__menu' title="Magret de canard">Magret de canard</span>
+                            <span class='assiette__texte__menu' title="Et parmentier de pommes de terre">Et parmentier de pommes de terre</span>
+                        </span>
+                        <span class='assiette__prix'>35€</span>
+
+                        <!-- validation -->
+                        <span class='assiette--valide'>
+                            <i class="fas fa-check-circle assiette--valide--icone"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- plat 3 -->
+                <div class='repas__plat--choix'>
+
+                    <!-- selection choix -->
+                    <input type="checkbox" name='menu_a_la_française' id='plat3' class='selection'>
+                    <label for='plat3' class='assiette assiette--trois'>
+
+                        <!-- description plat -->
+                        <span class='assiette__texte'>
+                            <span class='assiette__texte__menu' title="Pigeonneau d’Ille-et-Vilaine">Pigeonneau d’Ille-et-Vilaine</span>
+                            <span class='assiette__texte__menu' title="Sur son lit de gnocchis aux légumes">Sur son lit de gnocchis aux légumes</span>
+                        </span>
+                        <span class='assiette__prix'>44€</span>
+
+                        <!-- validation -->
+                        <span class='assiette--valide'>
+                            <i class="fas fa-check-circle assiette--valide--icone"></i>
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+        
+            <!-- titre des desserts -->
+            <h3 class="repas__titre">desserts<span class="repas__titre--barre"></span></h3>
+
+            <!-- groupe des desserts -->
+            <fieldset class='repas__dessert'>
+
+                <!-- dessert 1 -->
+                <div class='repas__dessert--choix'>
+
+                    <!-- selection choix -->
+                    <input type="checkbox" name='menu_a_la_française' id='dessert1' class='selection'>
+                    <label for='dessert1' class='assiette assiette--un'>
+
+                        <!-- description dessert -->
+                        <span class='assiette__texte'>
+                            <span class='assiette__texte__menu' title="Pétales de violettes glacés">Pétales de violettes glacés</span>
+                            <span class='assiette__texte__menu' title="Et purée de noisettes">Et purée de noisettes</span>
+                        </span>
+                        <span class='assiette__prix'>18€</span>
+
+                        <!-- validation -->
+                        <span class='assiette--valide'>
+                            <i class="fas fa-check-circle assiette--valide--icone"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- dessert 2 -->
+                <div class='repas__dessert--choix'>
+
+                    <!-- selection choix -->
+                    <input type="checkbox" name='menu_a_la_française' id='dessert2' class='selection'>
+                    <label for='dessert2' class='assiette assiette--deux'>
+
+                        <!-- description dessert -->
+                        <span class='assiette__texte'>
+                            <span class='assiette__texte__menu' title="Fondant au chocolat">Fondant au chocolat</span>
+                            <span class='assiette__texte__menu' title="Revisité">Revisité</span>
+                        </span>
+                        <span class='assiette__prix'>22€</span>
+
+                        <!-- validation -->
+                        <span class='assiette--valide'>
+                            <i class="fas fa-check-circle assiette--valide--icone"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- dessert 3 -->
+                <div class='repas__dessert--choix'>
+
+                    <!-- selection choix -->
+                    <input type="checkbox" name='menu_a_la_française' id='dessert3' class='selection'>
+                    <label for='dessert3' class='assiette assiette--trois'>
+
+                        <!-- description dessert -->
+                        <span class='assiette__texte'>
+                            <span class='assiette__texte__menu' title="Millefeuille croustillant">Millefeuille croustillant</span>
+                            <span class='assiette__texte__menu' title="Myrtilles et pâte d’amande">Myrtilles et pâte d’amande</span>
+                        </span>
+                        <span class='assiette__prix'>23€</span>
+
+                        <!-- validation -->
+                        <span class='assiette--valide'>
+                            <i class="fas fa-check-circle assiette--valide--icone"></i>
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+             <!--validation du formulaire-->
+             <input type='submit' class="bouton-principal" value="Commander">
+        </form>
+
+
+
+    </main>
+
+
+
+
+
+    <!--pied de page-->
+    <footer>
+        <h3>ohmyfood</h3>
+        <ul>
+        <li><i class="fa solid fa-utensils"></i><a href="#">Proposer un Restaurant</a></li>
+        <li><i class="fa solid fa-handshake-angle"></i><a href="#">Devenir partenaire</a></li> 
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="mailto:exemple@ohmyfood.fr">Contact</a></li>
+        </ul>
+    </footer>
+    
+</body>
+
+
+</html>

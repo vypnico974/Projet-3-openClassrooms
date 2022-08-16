@@ -1,83 +1,83 @@
 .restaurant {
-    background-color: $couleur-arriere-plan;
-    padding: $marge-section;
-    line-height: $espace-entre-ligne;    
-    margin: 1.5rem 0 4rem 0;    
-    &__cartes {
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;      
-    }    
-    &__card {
-      @media (min-width:$ordinateur) {
-        display: flex;
-        flex-wrap: wrap;
-        width: 49%;
-      }
-      &:hover{
-        box-shadow: 0rem 0.2rem 0.5rem 0.1rem $couleur-primaire;
-      }  
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    background-color: $couleur-blanc;    
-    border-radius: 1rem;
-    overflow: hidden;
-    @include ombre-conteneur;
-      & img {
-        width: 100%;
-        height: 10rem;
-        object-fit: cover;
-      }
-    }    
-    &__description {
+  background-color: $couleur-arriere-plan;
+  padding: $marge-section;
+  line-height: $espace-entre-ligne;    
+  margin: 1.5rem 0 4rem 0;    
+  &__cartes {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;      
+  }    
+  &__card {
+    @media (min-width:$ordinateur) {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: $marge-section;
-    }    
-    &__text {
-      display:flex;
-      flex-direction: column;
-      & > h2 {
-        font-size:$h1-taille;
-        font-weight: 500;
-        margin: 0;
-      }
+      flex-wrap: wrap;
+      width: 49%;
+    }
+    &:hover{
+      box-shadow: 0rem 0.2rem 0.5rem 0.1rem $couleur-primaire;
+    }  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  background-color: $couleur-blanc;    
+  border-radius: 1rem;
+  overflow: hidden;
+  @include ombre-conteneur;
+    & img {
+      width: 100%;
+      height: 10rem;
+      object-fit: cover;
+    }
+  }    
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $marge-section;
+  }    
+  &__text {
+    display:flex;
+    flex-direction: column;
+    & > h2 {
+      font-size:$h1-taille;
+      font-weight: 500;
+      margin: 0;
     }
   }
-  
-  .new {
-    position: relative;
-    &::before {
-    @include btn-nouveau;
-    }   
+}
+
+.new {
+  position: relative;
+  &::before {
+  @include btn-nouveau;
+  }   
+}
+
+.icone-coeur {
+  position: relative;    
+  & i {
+  font-size: $h1-taille ;
+  }    
+  & .fas {
+    position:absolute;
+    opacity: 0;
+    @include gradient (180deg);
+    cursor:pointer;
+    background-clip:text; /* L'arrière-plan est limité (rogné) au texte en premier plan  */
+    -webkit-background-clip:text;
+    color:transparent;  
+  }    
+  &:hover .fas {
+    transition: all 450ms ease-in;
+    display: inline;
+    opacity: 1;
+  }    
+  &:hover .far {
+    transition: all 450ms ease-in;
+    opacity: 0;
   }
   
-  .icone-coeur {
-    position: relative;    
-    & i {
-    font-size: $h1-taille ;
-    }    
-    & .fas {
-      position:absolute;
-      opacity: 0;
-      @include gradient (180deg);
-      cursor:pointer;
-      background-clip:text; /* L'arrière-plan est limité (rogné) au texte en premier plan  */
-      -webkit-background-clip:text;
-      color:transparent;  
-    }    
-    &:hover .fas {
-      transition: all 450ms ease-in;
-      display: inline;
-      opacity: 1;
-    }    
-    &:hover .far {
-      transition: all 450ms ease-in;
-      opacity: 0;
-    }
-  }
-  
+}

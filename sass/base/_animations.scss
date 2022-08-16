@@ -6,15 +6,12 @@
   100% { transform: rotate(360deg);
   }
 }
-
 @keyframes fin {
   100% {
     opacity: 0;
     visibility: hidden;
   }
 }
-
-
 
 /* animation apparaitre menu restaurants */
 @keyframes apparaitre{
@@ -23,3 +20,5 @@
   60%{opacity: 0.6}
   100%{opacity: 1}
 }
+
+

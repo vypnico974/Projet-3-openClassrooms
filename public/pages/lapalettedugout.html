@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Ohmyfood!</title>
+    <title>La palette du goût</title>
     <!-- fichiers CSS -->
     <link rel="stylesheet" href="../../css/reset.css"> 
     <link rel="stylesheet" href="../../css/style.css"> 
@@ -30,16 +30,17 @@
     
     <main class="menu roboto">
 
-        <div class="menu__header">
-            <h4>La palette du goût</h4>
-            <div class="icone-coeur">
-              <i class="fa-heart fas"></i>
-              <i class="fa-heart far"></i>
+        <!-- formulaire repas -->
+        <form class='repas'>
+                <div class="menu__header">
+                <h4>La palette du goût</h4>
+                 <div class="icone-coeur-selection">                
+                  <i class="fa-heart fas"></i>
+                  <i class="fa-heart far"></i>
+                </div>
             </div>
-        </div>
 
-         <!-- formulaire repas -->
-         <form class='repas'>
+       
             <!-- titre des entrées -->
             <h3 class="repas__titre">entrées <span class="repas__titre--barre"></span></h3> 
             <!-- entrées -->
@@ -104,18 +105,15 @@
             <fieldset class='repas__plat'>
                 <!-- plat 1 -->
                 <div class='repas__plat--choix'>
-
                     <!-- selection choix -->
                     <input type="checkbox" name='menu_la_palette_du_gout' id='plat1' class='selection'>
                     <label for='plat1' class='assiette assiette--un'>
-
                         <!-- description plat -->
                         <span class='assiette__texte'>
                             <span class='assiette__texte__menu' title="Filet de boeuf aux herbes">Filet de boeuf aux herbes</span>
                             <span class='assiette__texte__menu' title="Accompagné de sa ribambelle de légumes">Accompagné de sa ribambelle de légumes</span>
                         </span>
                         <span class='assiette__prix'>40€</span>
-
                         <!-- validation -->
                         <span class='assiette--valide'>
                             <i class="fas fa-check-circle assiette--valide--icone"></i>
@@ -125,18 +123,15 @@
 
                 <!-- plat 2 -->
                 <div class='repas__plat--choix'>
-
                     <!-- selection choix -->
                     <input type="checkbox" name='menu_la_palette_du_gout' id='plat2' class='selection'>
                     <label for='plat2' class='assiette assiette--deux'>
-
                         <!-- description plat -->
                         <span class='assiette__texte'>
                             <span class='assiette__texte__menu' title="Parmentier de queue de boeuf">Parmentier de queue de boeuf</span>
                             <span class='assiette__texte__menu' title="À la truffe noire sur sa purée de panais">À la truffe noire sur sa purée de panais</span>
                         </span>
                         <span class='assiette__prix'>35€</span>
-
                         <!-- validation -->
                         <span class='assiette--valide'>
                             <i class="fas fa-check-circle assiette--valide--icone"></i>
@@ -146,18 +141,15 @@
 
                 <!-- plat 3 -->
                 <div class='repas__plat--choix'>
-
                     <!-- selection choix -->
                     <input type="checkbox" name='menu_la_palette_du_gout' id='plat3' class='selection'>
                     <label for='plat3' class='assiette assiette--trois'>
-
                         <!-- description plat -->
                         <span class='assiette__texte'>
                             <span class='assiette__texte__menu' title="Filet de turbot">Filet de turbot</span>
                             <span class='assiette__texte__menu' title="Aux agrumes">Aux agrumes</span>
                         </span>
                         <span class='assiette__prix'>44€</span>
-
                         <!-- validation -->
                         <span class='assiette--valide'>
                             <i class="fas fa-check-circle assiette--valide--icone"></i>
@@ -168,24 +160,19 @@
         
             <!-- titre des desserts -->
             <h3 class="repas__titre">desserts<span class="repas__titre--barre"></span></h3>
-
             <!-- groupe des desserts -->
             <fieldset class='repas__dessert'>
-
                 <!-- dessert 1 -->
                 <div class='repas__dessert--choix'>
-
                     <!-- selection choix -->
                     <input type="checkbox" name='menu_la_palette_du_gout' id='dessert1' class='selection'>
                     <label for='dessert1' class='assiette assiette--un'>
-
                         <!-- description dessert -->
                         <span class='assiette__texte'>
                             <span class='assiette__texte__menu' title="Paris-Brest">Paris-Brest</span>
                             <span class='assiette__texte__menu' title="Revisité">Revisité</span>
                         </span>
                         <span class='assiette__prix'>18€</span>
-
                         <!-- validation -->
                         <span class='assiette--valide'>
                             <i class="fas fa-check-circle assiette--valide--icone"></i>
@@ -195,18 +182,15 @@
 
                 <!-- dessert 2 -->
                 <div class='repas__dessert--choix'>
-
                     <!-- selection choix -->
                     <input type="checkbox" name='menu_la_palette_du_gout' id='dessert2' class='selection'>
                     <label for='dessert2' class='assiette assiette--deux'>
-
                         <!-- description dessert -->
                         <span class='assiette__texte'>
                             <span class='assiette__texte__menu' title="Macaron au chocolat d'exception">Macaron au chocolat d'exception</span>
                             <span class='assiette__texte__menu' title="Et glace à la vanille de Madagascar">Et glace à la vanille de Madagascar</span>
                         </span>
                         <span class='assiette__prix'>22€</span>
-
                         <!-- validation -->
                         <span class='assiette--valide'>
                             <i class="fas fa-check-circle assiette--valide--icone"></i>
@@ -216,18 +200,15 @@
 
                 <!-- dessert 3 -->
                 <div class='repas__dessert--choix'>
-
                     <!-- selection choix -->
                     <input type="checkbox" name='menu_la_palette_du_gout' id='dessert3' class='selection'>
                     <label for='dessert3' class='assiette assiette--trois'>
-
                         <!-- description dessert -->
                         <span class='assiette__texte'>
                             <span class='assiette__texte__menu' title="Mousse au chocolat">Mousse au chocolat</span>
                             <span class='assiette__texte__menu' title="Au piment d'Espelette et à la truffe noire">Au piment d'Espelette et à la truffe noire</span>
                         </span>
                         <span class='assiette__prix'>23€</span>
-
                         <!-- validation -->
                         <span class='assiette--valide'>
                             <i class="fas fa-check-circle assiette--valide--icone"></i>
@@ -235,7 +216,8 @@
                     </label>
                 </div>
             </fieldset>
-            <input type='button' class="bouton-principal" value="Commander">
+             <!--validation du formulaire-->
+             <input type='submit' class="bouton-principal" value="Commander">
         </form>
 
 
