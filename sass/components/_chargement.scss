@@ -5,7 +5,7 @@
     z-index: 10; /*  la couche chargement s'affiche en premier  */
     @extend %centrer_flex;  
     background-color: $couleur-blanc;
-  
+    
     &__cercle--primaire {
       width: 12rem;
       height: 12rem;  
