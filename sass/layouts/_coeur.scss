@@ -1,0 +1,27 @@
+.icone-coeur {
+    position: relative;    
+    & i {
+    font-size: $h1-taille ;
+    }    
+    & .fas {
+      position:absolute;
+      opacity: 0;
+      @include gradient (180deg);
+      cursor:pointer;
+      background-clip:text; /* L'arrière-plan est limité (rogné) au texte en premier plan  */
+      -webkit-background-clip:text;
+      color:transparent;  
+    }
+    &__selection{
+        opacity: 0;
+        &:checked + .fas {
+            transition: all 450ms ease-in;
+            display: inline;
+            opacity: 1;
+        }
+        &:hover .far {
+            transition: all 450ms ease-in;
+            opacity: 0;
+        } 
+    }
+  }

@@ -7,6 +7,7 @@
     <!-- fichiers CSS -->
     <link rel="stylesheet" href="../../css/reset.css"> 
     <link rel="stylesheet" href="../../css/style.css"> 
+    <!--   à rajouter à la fin prefixed   **********************************-->
     <!-- kit fontawesion pour import d'icône-->
      <!-- kit fontawesion pour import d'icône-->
      <script src="https://kit.fontawesome.com/0b6d538c32.js" crossorigin="anonymous"></script>
@@ -34,10 +35,11 @@
         <form class='repas'>
                 <div class="menu__header">
                 <h4>La palette du goût</h4>
-                 <div class="icone-coeur-selection">                
-                  <i class="fa-heart fas"></i>
-                  <i class="fa-heart far"></i>
-                </div>
+                <label class="icone-coeur">
+                    <input type='checkbox' class='icone-coeur__selection' name='aime' id='aime_la-palette-du-gout'>                
+                    <i class="fa-heart fas"></i>
+                    <i class="fa-heart far"></i>
+                </label>
             </div>
 
        

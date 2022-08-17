@@ -14,30 +14,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .icone-coeur-selection {
-        position: relative;    
-        & i {
-        font-size: $h1-taille ;
-        }    
-        & .fas {
-          position:absolute;
-          opacity: 0;
-          @include gradient (180deg);
-          cursor:pointer;
-          background-clip:text; /* L'arrière-plan est limité (rogné) au texte en premier plan  */
-          -webkit-background-clip:text;
-          color:transparent;  
-        }    
-        &:hover .fas {
-          transition: all 450ms ease-in;
-          display: inline;
-          opacity: 1;
-        }    
-        &:hover .far {
-          transition: all 450ms ease-in;
-          opacity: 0;
-        }
-      }
+
     }
     h4 {
       font-size: $h1-taille;
