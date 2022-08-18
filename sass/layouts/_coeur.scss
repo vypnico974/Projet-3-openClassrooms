@@ -3,7 +3,7 @@
     & i {
     font-size: $h1-taille ;
     }    
-    & .fas {
+    & .fas { /* coeur rempli par gradient et invisible  */
       position:absolute;
       opacity: 0;
       @include gradient (180deg);
@@ -14,12 +14,12 @@
     }
     &__selection{
         opacity: 0;
-        &:checked + .fas {
+        &:checked + .fas { /* apparition du coeur rempli gradient transition par clic   */
             transition: all 450ms ease-in;
             display: inline;
             opacity: 1;
         }
-        &:hover .far {
+        &:checked .far { /* apparition du coeur vide transition par clic  */
             transition: all 450ms ease-in;
             opacity: 0;
         } 

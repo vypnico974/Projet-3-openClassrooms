@@ -1,7 +1,6 @@
 /* responsive écran */
 $tablet-smarphone: 991px;
 $ordinateur: 992px;
-
 /*  couleurs  */
 $couleur-primaire: #9356DC;
 $couleur-secondaire: #FF79DA;
@@ -12,23 +11,26 @@ $couleur-police: #000;
 $couleur-police-claire: #FFF;
 $ombre_arrondie: #b4b4b4;
 $couleur-ombre:#D5D5D5;
-
 /* typographie  */
 $h1-taille : 1.5rem;
 $h2-taille : 1.5rem;
 $fontsize-taille:1rem; 
 $fontsize-menu:1.1rem; 
-
 /* marge et espace entre ligne */
 $marge-section:1rem;
 $marge-footer:1rem;
 $espace-entre-ligne:25px;
-
 /* pourcentage */
 $pourcent: 5%;
-
 /* bordure arrondie de l'ombre   */
 $btn-ombre: 0rem 0.2rem 0.5rem 0.1rem;
+/* delais pour apparition des assiettes   */
+$liste-assiettes:"un","deux","trois","quatre";
+$delais : 0.8;
+/* pour utilisation boucle each  */
+$liste-repas : "entree","plat","dessert" ;
+
+
 
 
 
