@@ -75,44 +75,7 @@
 }
 
 
-
-@each $valeur in $liste-repas {
-    .repas__#{$valeur} {       
-        @extend %conteneur-ligne;
-        opacity: 0; 
-        @include margin;
-        @include pad;
-        animation: apparaitre 1.3s linear forwards; 
-        &--choix{
-            @extend %choix;
-            @media screen and (min-width: $ordinateur){
-                width: 30vw;
-            }        
-        }             
-        @if ($valeur == "entree") {
-            @media screen and (max-width: $tablet-smarphone){
-                width: 350px;
-            }               
-            &--quatrechoix{
-                height: 350px; 
-                @media screen and (min-width: $ordinateur){
-                height: 165px;
-                }
-            @media screen and (min-width: $ordinateur){
-                height: 185px;
-                min-height: unset; /* non défini   */
-                } 
-            }           
-        }
-        @else{
-                height: 250px;
-                @media screen and (min-width: $ordinateur){
-                height: 85px;
-                
-            }          
-        }      
-    }
-}
+@include boucle_repas($liste-repas);
 
 
 
@@ -154,7 +117,6 @@
         }
     } /* prix de l'assiette */
     &__prix{
-        height: 32px;
         width: 45px;
         padding-left: 0px;
         margin: 36px 3px 0 3px;

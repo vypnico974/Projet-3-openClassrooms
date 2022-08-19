@@ -21,6 +21,53 @@
     }
   }
 }
+@mixin boucle_repas($liste-repas) {
+  @each $valeur in $liste-repas {
+    .repas__#{$valeur} {       
+        @extend %conteneur-ligne;
+        opacity: 0; 
+        @include margin;
+        @include pad;
+        animation: apparaitre 1.3s linear forwards; 
+        &--choix{
+            height: 80px;
+            @include margin;
+            @include pad;
+            @extend %choix;
+            @media screen and (min-width: $ordinateur){
+                width: 30vw;
+            }        
+        }             
+        @if ($valeur == "entree") {
+            @media screen and (max-width: $tablet-smarphone){
+                margin-left: 20px;
+                width: 350px;
+            }               
+            &--quatrechoix{
+                height: 350px; 
+                @media screen and (min-width: $ordinateur){
+                height: 165px;
+                }
+            @media screen and (min-width: $ordinateur){
+                height: 185px;
+                min-height: unset; /* non défini   */
+                } 
+            }           
+        }
+        @else{
+                height: 250px;
+                @media screen and (min-width: $ordinateur){
+                height: 85px;
+                
+            }          
+        }      
+    }
+}
+ 
+}
+
+
+
 /* padding */
 @mixin pad {
   padding: 5px 0;
@@ -33,6 +80,9 @@
 @mixin ombre-ok{
   box-shadow: 0px 5px 10px 0px $ombre-arrondie;
 }
+
+
+
 
 
 
