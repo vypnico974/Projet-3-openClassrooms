@@ -1,48 +1,27 @@
 .chargement {
-    position:fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 10; /*  la couche chargement s'affiche en premier  */
-    @extend %centrer_flex;  
-    background-color: $couleur-blanc;
-    
-    &__cercle--primaire {
-      width: 12rem;
-      height: 12rem;  
+  position:fixed; /* pour créer un élément flottant qui reste à la même position, même lorsqu'on fait défiler la page   */
+  width: 100%;
+  height: 100%;
+  z-index: 10; /*  la couche chargement s'affiche en premier  */
+  @include centrer_flex;  
+  background-color: $couleur-blanc;
+  @each $valeur, $taille, $couleur, $duree
+   in zip($liste-couleur-titre, $liste-taille-cercle, $liste-couleur, $liste-duree-cercle)  {
+    &__cercle--#{$valeur} {
       border-radius: 7rem;
-      border: 1vw solid transparent;
-      border-top-color: $couleur-primaire;
-      border-bottom-color: $couleur-primaire;  
-      animation: tourner 1s linear infinite;  
       position: absolute; 
       margin:auto;
-    }  
-    &__cercle--secondaire {
-      width: 10rem;
-      height: 10rem;  
-      border-radius: 6rem;
-      border: 1vw solid transparent;
-      border-top-color: $couleur-secondaire;
-      border-bottom-color: $couleur-secondaire;  
-      animation: tourner 1.25s linear infinite;  
-      position: absolute;
-      margin: auto;
-    }    
-    &__cercle--tertiaire {
-       width: 8rem;
-      height: 8rem;  
-      border-radius: 5rem;
-      border: 1vw solid transparent;
-      border-top-color: $couleur-tertiaire;
-      border-bottom-color: $couleur-tertiaire;  
-      animation: tourner 1.5s linear infinite;      
-      position: absolute;
-      margin: auto;
+      border: 0.5rem solid transparent;
+      width: $taille;
+      height: $taille;
+      border-top-color: $couleur;
+      border-bottom-color: $couleur;
+      animation: tourner $duree linear infinite; 
     }
-  }  
-  .cacher {
-    animation: fin 1s forwards;
+  }
+} 
+.cacher {
+    animation: fin 1s forwards; /* forwards: La cible retiendra les valeurs calculées définies lors de la dernière étape */
     animation-delay: 2s;
   }
-  
   

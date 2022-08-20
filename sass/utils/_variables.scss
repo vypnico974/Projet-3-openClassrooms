@@ -11,7 +11,7 @@ $couleur-police: #000;
 $couleur-police-claire: #FFF;
 $ombre_arrondie: #b4b4b4;
 $couleur-ombre:#D5D5D5;
-$liste-couleurs : "primaire","secondaire","tertiaire" ;
+
 /* typographie  */
 $h1-taille : 1.5rem;
 $h2-taille : 1.5rem;
@@ -28,10 +28,15 @@ $btn-ombre: 0rem 0.2rem 0.5rem 0.1rem;
 /* delais pour apparition des assiettes   */
 $liste-assiettes:"un","deux","trois","quatre";
 $delais : 0.8;
-/* pour utilisation boucle each  */
+/* listes  */
 $liste-repas : "entree","plat","dessert" ;
+$liste-couleur-titre : "primaire","secondaire","tertiaire" ;
+$liste-couleur : $couleur-primaire, $couleur-secondaire, $couleur-tertiaire ;
+$liste-taille-cercle : 12rem, 10rem, 8rem ;
+$liste-duree-cercle : 1s, 1.25s, 1.5s ;
 
-$chargement-cercle : 10;
+
+
 
 
 

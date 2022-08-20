@@ -75,7 +75,12 @@
     }
   } 
 }
-
+// Centrer un objet 
+@mixin centrer_flex {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 
 
 /* padding */
