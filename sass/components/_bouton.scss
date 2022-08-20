@@ -8,13 +8,14 @@
     border: none;
     padding: 1rem 2rem;
     margin: 2rem 0;
-    box-shadow: 0rem 0.2rem 0.5rem 0.1rem #d5d5d5;
-    background: #9356DC;
-    background: linear-gradient(-10deg, #9356DC 25%, #FF79DA 100%);
-    /* Au survol, la couleur de fond du boouton s’éclaircie  légèrement.
+    box-shadow: 0rem 0.2rem 0.5rem 0.1rem $couleur-ombre; /* ombre du bouton  */
+    background: $couleur-primaire;
+    /* Un dégradé incliné -10degrés,commençant couleur primaire et finissant en couleur secondaire. */
+    background: linear-gradient(-10deg, $couleur-primaire 25%, $couleur-secondaire 100%);
+    /* Au survol, la couleur de fond du bouton s’éclaircie  légèrement.
     L’ombre portée est plus visible. */
      &:hover {
-        @extend %hover-btn;
+        @include hover-btn;
     }
   }
 

@@ -17,13 +17,14 @@
   padding: 0.5rem;
   font-family: 'Roboto', 'sans-serif';
   font-size: 0.8rem;
-  color: darken($couleur-tertiaire, $amount: 50);
+  color: darken($couleur-tertiaire, $amount: 50); /* assombri la couleur choisie */
   background-color: $couleur-tertiaire;
   top: 1rem;
   right: 1rem;
   border-radius: 0.25rem;
 }
 
+/*  léger décalage dans le temps  */
 @mixin apparaitre-assiette ($listes-assiette,$delais) {
   @each $liste in $liste-assiettes{
     &--#{$liste} {
@@ -33,6 +34,7 @@
     }
   }
 }
+/* les plats apparaissent un par un  */
 @mixin boucle_repas($liste-repas) {
   @each $valeur in $liste-repas {
     .repas__#{$valeur} {       
@@ -75,11 +77,19 @@
     }
   } 
 }
-// Centrer un objet 
+/* Centrer un objet */
 @mixin centrer_flex {
   display:flex;
   justify-content:center;
   align-items:center;
+}
+ /* Au survol, la couleur de fond du bouton s’éclaircie  légèrement.
+    L’ombre portée est plus visible. */
+@mixin hover-btn {
+  transform: scale(1.05);
+  transition: all 80ms ease-in; /* l'animation commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée */
+  filter: brightness(1.05); /* applique un multiplicateur linéaire sur une image afin de la rendre plus claire ou plus sombre */
+  box-shadow: $couleur-ombre 0.5rem 0.5rem 0.5rem 0.1rem; /* ajoute une ombre au bouton */
 }
 
 

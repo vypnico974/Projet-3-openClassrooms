@@ -22,32 +22,34 @@
   
 .fonction__btn {
   display: flex;
-  align-items: center;
   background-color: $couleur-arriere-plan;
   border-radius: 1.5rem;
-  flex-grow: 1;
+  flex-grow: 1; /* définit le facteur d'expansion d'un élément flexible selon sa dimension principale  */
   padding: 1.5rem 0;
   width: 100%;
   @include ombre-conteneur;
   &:hover {
-      transition: all 380ms ease-in;
-      @include btn-lighten;
+    transition: all 380ms ease-in; /*  la transition commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée  */
+    @include btn-lighten; /* couleur plus claire   */
+    i {
+    color : $couleur-primaire;
     }
-    &::before {
-      counter-increment: steps;
-      content: counter(steps);
-      position: relative;
-      left: -0.8rem;
-      color: #FFF;
-      width: 1.5rem;
-      height: 1.5rem;
-      background-color: #9356DC;
-      border-radius: 50%;
-      @extend %centrer_flex;
   }
-    & i { /* icône */
-      color: grey;
-      padding: 0 1rem;
-      font-size: $h1-taille;
-    }
+  &::before { /*  le premier enfant de l élément cible  */
+    counter-increment: steps; /* initialise l'incrémentation  */
+    content: counter(steps); /* affiche l'incrémentation   */
+    position: relative;
+    left: -0.8rem;
+    color: #FFF;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $couleur-primaire;
+    border-radius: 50%;
+    @extend %centrer_flex;       
+  }
+  & i { /* icône */
+    color: darken($ombre-arrondie, $amount: 10); /* gris plus foncé  */
+    padding: 0 1rem;
+    font-size: $h1-taille;
+  }
 }
