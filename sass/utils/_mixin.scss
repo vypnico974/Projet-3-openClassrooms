@@ -11,6 +11,18 @@
   background: $couleur-primaire;
   background:linear-gradient(($degree), $couleur-primaire 25%, $couleur-secondaire 100%);
 }
+@mixin btn-nouveau {
+  content: 'Nouveau';
+  position: absolute;
+  padding: 0.5rem;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 0.8rem;
+  color: darken($couleur-tertiaire, $amount: 50);
+  background-color: $couleur-tertiaire;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 0.25rem;
+}
 
 @mixin apparaitre-assiette ($listes-assiette,$delais) {
   @each $liste in $liste-assiettes{
@@ -24,46 +36,44 @@
 @mixin boucle_repas($liste-repas) {
   @each $valeur in $liste-repas {
     .repas__#{$valeur} {       
-        @extend %conteneur-ligne;
-        opacity: 0; 
+      @extend %conteneur-ligne;
+      opacity: 0; 
+      @include margin;
+      @include pad;
+      animation: apparaitre 1.3s linear forwards; 
+      &--choix{
+        height: 80px;
         @include margin;
         @include pad;
-        animation: apparaitre 1.3s linear forwards; 
-        &--choix{
-            height: 80px;
-            @include margin;
-            @include pad;
-            @extend %choix;
-            @media screen and (min-width: $ordinateur){
-                width: 30vw;
-            }        
-        }             
-        @if ($valeur == "entree") {
+        @extend %choix;
+        @media screen and (min-width: $ordinateur){
+          width: 30vw;
+        }        
+      }             
+      @if ($valeur == "entree") {             
+          @extend %conteneur-ligne;
             @media screen and (max-width: $tablet-smarphone){
-                margin-left: 20px;
-                width: 350px;
+              height: 250px; 
             }               
             &--quatrechoix{
-                height: 350px; 
-                @media screen and (min-width: $ordinateur){
-                height: 165px;
-                }
+              height: 350px; 
+              @media screen and (min-width: $ordinateur){
+              height: 165px;
+              }
             @media screen and (min-width: $ordinateur){
-                height: 185px;
-                min-height: unset; /* non défini   */
-                } 
-            }           
+              height: 185px;
+              min-height: unset; /* non défini   */
+            } 
+          }           
         }
-        @else{
-                height: 250px;
-                @media screen and (min-width: $ordinateur){
-                height: 85px;
-                
-            }          
-        }      
+      @else{
+        height: 250px;
+        @media screen and (min-width: $ordinateur){
+          height: 85px;
+        }          
+      }      
     }
-}
- 
+  } 
 }
 
 

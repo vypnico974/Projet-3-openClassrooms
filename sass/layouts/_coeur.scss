@@ -15,12 +15,11 @@
     &__selection{
         opacity: 0;
         &:checked + .fas { /* apparition du coeur rempli gradient transition par clic   */
-            transition: all 450ms ease-in;
-            display: inline;
+            transition: all 750ms ease-in;
             opacity: 1;
         }
         &:checked .far { /* apparition du coeur vide transition par clic  */
-            transition: all 450ms ease-in;
+            transition: all 250ms ease-in;
             opacity: 0;
         } 
     }

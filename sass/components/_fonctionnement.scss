@@ -6,10 +6,9 @@
       display: flex;
       gap: 2rem;
       margin: 1.5rem;      
-      cursor: pointer;
-        @media (max-width:992px) {
-          flex-direction: column;
-        }
+      @media (max-width:992px) {
+        flex-direction: column;
+      }
     }
     h2{
       margin-left: 0.5rem;
@@ -31,14 +30,9 @@
   width: 100%;
   @include ombre-conteneur;
   &:hover {
-      transition: all 80ms ease-in;
+      transition: all 380ms ease-in;
       @include btn-lighten;
-        & > i { /*  couleur icône   */
-            transition: all 80ms ease-in; /* la transition commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée.   */
-            color:darken($color: $couleur-primaire, $amount: 15);
-        }
-        @extend %hover-btn; 
-      }
+    }
     &::before {
       counter-increment: steps;
       content: counter(steps);

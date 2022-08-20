@@ -18,15 +18,3 @@
     }
   }
 
-@mixin btn-nouveau {
-    content: 'Nouveau';
-    position: absolute;
-    padding: 0.5rem;
-    font-family: 'Roboto', 'sans-serif';
-    font-size: 0.8rem;
-    color: darken($couleur-tertiaire, $amount: 50);
-    background-color: $couleur-tertiaire;
-    top: 1rem;
-    right: 1rem;
-    border-radius: 0.25rem;
-  }
