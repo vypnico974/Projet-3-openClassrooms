@@ -86,11 +86,11 @@
   width: 93vw;
   height: 68px; 
   display: flex;
-  transform: translateY(10px);
+ 
 }
 @mixin conteneur-ligne {
   display: flex;
-  flex-flow: row wrap;  
+  flex-flow: row wrap;  /* en ligne, passe sur une nouvelle ligne si besoin */ 
   justify-content: space-around;
   align-content:space-around;
   border: none;

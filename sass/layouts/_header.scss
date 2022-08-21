@@ -7,7 +7,7 @@
       @include centrer_flex;
       margin: 0;
       padding:$marge_section;
-      box-shadow: 0vw 0vw 0.5vw $couleur-ombre;
+      box-shadow: 0vw 0vw 0.5vw $couleur-ombre; /* ajout une ombre */
       & img {
         width: 190px;
       }

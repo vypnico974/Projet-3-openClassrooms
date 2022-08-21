@@ -29,7 +29,8 @@
     & img {
       width: 100%;
       height: 10rem;
-      object-fit: cover;
+      object-fit: cover;/* Le contenu remplacé est dimensionné pour maintenir son ratio 
+      d'affichage tout en remplissant toute la boîte de contenu  */
     }
   }    
   &__description {
@@ -41,7 +42,7 @@
   &__text {
     display:flex;
     flex-direction: column;
-    & > h2 {
+    & > h2 { /* combinateur filiale, h2 est le fils de '...$__text' */
       font-size:$h1-taille;
       font-weight: 500;
       margin: 0;
@@ -51,7 +52,7 @@
 
 .new {
   position: relative;
-  &::before {
+  &::before { /* ajoute avant le 'cadre nouveau'  */
   @include bouton-nouveau;
   }   
 }
