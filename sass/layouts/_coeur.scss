@@ -6,7 +6,8 @@
     & .fas { /* coeur rempli par gradient et invisible  */
       position:absolute;
       opacity: 0;
-      @include gradient (180deg);
+      @include gradient (180deg); /* Un dégradé incliné de 180 degrés,
+      commençant en couleur primaire 25% à et finissant en couleur secondaire à 100%. */
       cursor:pointer;
       background-clip:text; /* L'arrière-plan est limité (rogné) au texte en premier plan  */
       -webkit-background-clip:text;
@@ -15,11 +16,11 @@
     &__selection{
         opacity: 0;
         &:checked + .fas { /* apparition du coeur rempli gradient transition par clic   */
-            transition: all 750ms ease-in;
+            transition: all 750ms ease-in; /*  la transition commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée  */
             opacity: 1;
         }
-        &:checked .far { /* apparition du coeur vide transition par clic  */
-            transition: all 250ms ease-in;
+        &:checked  + .far { /* apparition du coeur vide transition par clic  */
+            transition: all 250ms ease-in; /*  la transition commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée  */
             opacity: 0;
         } 
     }

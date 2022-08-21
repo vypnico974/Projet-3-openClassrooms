@@ -28,9 +28,9 @@
   padding: 1.5rem 0;
   width: 100%;
   @include ombre-conteneur;
-  &:hover {
+  &:hover { /* au survole  */
     transition: all 380ms ease-in; /*  la transition commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée  */
-    @include btn-lighten; /* couleur plus claire   */
+    @include bouton-clair; /* couleur plus claire   */
     i {
     color : $couleur-primaire;
     }
@@ -45,7 +45,7 @@
     height: 1.5rem;
     background-color: $couleur-primaire;
     border-radius: 50%;
-    @extend %centrer_flex;       
+    @include centrer_flex;       
   }
   & i { /* icône */
     color: darken($ombre-arrondie, $amount: 10); /* gris plus foncé  */

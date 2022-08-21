@@ -3,7 +3,7 @@
     box-shadow: $btn-ombre $couleur-ombre;
 }
 /* couleur plus claire d’un certain montant exprimé en pourcentage  */
-@mixin btn-lighten($color:$couleur-primaire) {
+@mixin bouton-clair($color:$couleur-primaire) {
     background-color: lighten($color: $couleur-primaire, $amount: 25%)
 }
  /* couleur dégradée de 2 couleurs exprimées en pourcentage de l'arrière-plan    */  
@@ -11,7 +11,7 @@
   background: $couleur-primaire;
   background:linear-gradient(($degree), $couleur-primaire 25%, $couleur-secondaire 100%);
 }
-@mixin btn-nouveau {
+@mixin bouton-nouveau {
   content: 'Nouveau';
   position: absolute;
   padding: 0.5rem;
@@ -37,8 +37,11 @@
 /* les plats apparaissent un par un  */
 @mixin boucle_repas($liste-repas) {
   @each $valeur in $liste-repas {
-    .repas__#{$valeur} {       
-      @extend %conteneur-ligne;
+    .repas__#{$valeur} { 
+      @media screen and (width>2100px){
+        min-height: 250px;
+      }      
+      @include conteneur-ligne;
       opacity: 0; 
       @include margin;
       @include pad;
@@ -47,14 +50,14 @@
         height: 80px;
         @include margin;
         @include pad;
-        @extend %choix;
+        @include choix;
         @media screen and (min-width: $ordinateur){
           width: 30vw;
         }        
       }             
       @if ($valeur == "entree") {             
-          @extend %conteneur-ligne;
-            @media screen and (max-width: $tablet-smarphone){
+          @include conteneur-ligne;
+             @media screen and (max-width: $tablet-smarphone){
               height: 250px; 
             }               
             &--quatrechoix{
@@ -73,10 +76,26 @@
         @media screen and (min-width: $ordinateur){
           height: 85px;
         }          
-      }      
+      } 
+     
     }
   } 
 }
+
+@mixin choix{
+  width: 93vw;
+  height: 68px; 
+  display: flex;
+  transform: translateY(10px);
+}
+@mixin conteneur-ligne {
+  display: flex;
+  flex-flow: row wrap;  
+  justify-content: space-around;
+  align-content:space-around;
+  border: none;
+}
+
 /* Centrer un objet */
 @mixin centrer_flex {
   display:flex;

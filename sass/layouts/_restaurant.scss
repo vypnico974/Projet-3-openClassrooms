@@ -52,7 +52,7 @@
 .new {
   position: relative;
   &::before {
-  @include btn-nouveau;
+  @include bouton-nouveau;
   }   
 }
 

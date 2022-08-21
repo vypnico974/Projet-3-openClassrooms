@@ -1,37 +1,8 @@
-// Centrer un objet 
-  %centrer_flex {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-  }
+
   
  
-  %hover-btn {
-    transform: scale(1.05);
-    transition: all 80ms ease-in;
-    filter: brightness(1.05);
-    box-shadow: $couleur-ombre 0.5rem 0.5rem 0.5rem 0.1rem;
-  }
+ 
 
-  /* les éléments sont disposées sur une seule lignes */
-%conteneur-ligne{ 
-  display: flex;
-  flex-flow: row wrap;  
-  justify-content: space-around;
-  align-content:space-around;
-  border: none;
-}
-%choix{
-  width: 93vw;
-  height: 68px; 
-  display: flex;
-  transform: translateY(10px);
-}
+ 
 
-
-/* coeur*/
-%tap-coeur{
-  height: 48px;
-  width: 48px;
-}
 

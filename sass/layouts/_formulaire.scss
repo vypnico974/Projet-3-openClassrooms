@@ -1,4 +1,3 @@
-
 /* moteur de recherche */
 .recherche{
     width: 100%;
@@ -60,8 +59,7 @@
             background-color: $couleur-tertiaire;           
             @media screen and (min-width: $ordinateur){
                 width: 98%;
-                max-width:1700px;
-                /* longeur de la barre pour ordinateur  */                      
+                max-width:1700px; /* longeur de la barre pour ordinateur  */                                     
             }
         }    
    
@@ -74,21 +72,22 @@
     }  
 }
 
-
+/* boucle each permettant de gérer l'apparition des plat : positionnements    */
 @include boucle_repas($liste-repas);
 
 
 
 /* zone chaque assiette */
 .assiette{
-    width: 93vw;
+    width: 100%;
     height: 68px; 
     display: flex;
-    justify-content:stretch; /* start/center décale la div validé */
+    justify-content:stretch;/* Les éléments sont répartis équitablement et
+    les éléments dimensionnés avec 'auto' sont étirés afin de remplir le conteneur */
     border-radius: 20px;
-    @include ombre-ok;
+    @include ombre-ok; /* ombre arrondie du conteneur */
     background-color: $couleur-blanc;
-    overflow: hidden;    
+    overflow: hidden;   /* ne pas voir le dépassement  */ 
     /* délais d'apparitions des assiettes un par un par  colonne  */
     @include apparaitre-assiette($liste-assiettes,$delais); 
     
@@ -108,7 +107,7 @@
             white-space: nowrap;/* Les séries de blancs sont regroupées et le passage à la ligne est supprimée  */
             text-overflow: ellipsis; /* affiche une ellipsis pour afficher le texte rogné  */
             overflow: hidden;   
-            &:first-of-type{
+            &:first-of-type{ /* cibler le premier élément  */
                 height: 24px;
                 margin: 12px 0 0 0;
                 font-size: $fontsize-menu;
@@ -129,15 +128,12 @@
         width: 0px;
         min-width: 0px;
         height: 68px;
-        display:flex;
+        @include centrer_flex;
         flex: 0;
-        justify-content: center;
         position:relative;
-        left: 1px; /* évite un escalier de l'animation */
-        background-color: lighten($couleur-tertiaire, 10%);
+        background-color: lighten($couleur-tertiaire, 10%); /* couleur plus claire  */
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
-        transform-origin: 100% 50%;
         transition: all 0.4s linear;
         &--icone{ /* icone selection choix effectuée  */
             position: absolute;
@@ -148,41 +144,24 @@
         }
     }
     &:hover > .assiette--valide{
-        min-width: 60px;    }
-   
+        min-width: 60px;  
+    }   
 }
 
 /* selection choix assiette */
 .selection{
-    display: none;
-    @media screen and (max-width: $tablet-smarphone){
-        &:hover + .assiette .assiette--valide{
-            min-width: 60px;
-            background-color: $couleur-tertiaire; 
-        }
-        &:checked + .assiette .assiette--valide{
-            min-width: 60px;
-            background-color: $couleur-tertiaire;
-        }
-        &:not(:checked) + .assiette .assiette--valide{
-            min-width: 0px;
-            background-color: $couleur-tertiaire;
-        }
-        &:checked + .assiette .assiette--valide--icone{
-            animation: tourner 1.4s linear forwards; /* icone tourner */
-        }
-
-       
+    display: none; /* L'élément ne produit pas de boîte qui lui soit spécifique */
+    &:checked + .assiette .assiette--valide{
+        min-width: 60px;
+        background-color: $couleur-tertiaire;
     }
-    @media screen and (min-width: $ordinateur){
-        &:checked + .assiette .assiette--valide{
-            min-width: 60px;
-            background-color: $couleur-tertiaire;
-        }
-        &:not(:checked) + .assiette:hover .assiette--valide--icone{
-            animation: tourner 1.4s linear forwards; /* icone tourner */
-        }
+    &:not(:checked) + .assiette .assiette--valide{
+        min-width: 0px;
+        background-color: $couleur-tertiaire;
     }
+    &:checked + .assiette .assiette--valide--icone{
+        animation: tourner 1.4s linear forwards; /* icone qui tourne */ 
+    }    
 }
 
 
