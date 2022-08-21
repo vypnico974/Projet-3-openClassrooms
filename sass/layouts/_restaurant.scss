@@ -42,6 +42,7 @@
   &__text {
     display:flex;
     flex-direction: column;
+    flex:6;
     & > h2 { /* combinateur filiale, h2 est le fils de '...$__text' */
       font-size:$h1-taille;
       font-weight: 500;
