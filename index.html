@@ -6,7 +6,7 @@
     <title>Accueil - Ohmyfood!</title>
     <!-- fichiers CSS -->
     <link rel="stylesheet" href="./css/reset.css"> 
-    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="./public/css/prefixed/style.css"> 
     <!-- kit fontawesion pour import d'icône-->
     <script src="https://kit.fontawesome.com/0b6d538c32.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./public/img/utensils-solid.svg" />   
@@ -70,8 +70,10 @@
           </a>
           <div class="restaurant__description">
             <a href="./public/pages/lapalettedugout.html" class="restaurant__text">
-              <h2>La palette du goût</h2>
-              <p>Ménilmontant</p>
+              <div>
+                <h2>La palette du goût</h2>
+                <p>Ménilmontant</p>
+              </div>            
             </a>
             <label class="icone-coeur">
               <input type='checkbox' class='icone-coeur__selection' name='aime' id='aime_la-palette-du-gout'>                
@@ -87,8 +89,11 @@
           </a>
           <div class="restaurant__description">
             <a href="./public/pages/lanoteenchantee.html" class="restaurant__text">
-              <h2>La note enchantée</h2>
-              <p>Charonne</p>
+              <div>
+                <h2>La note enchantée</h2>
+                <p>Charonne</p>
+              </div>
+              
             </a>
             <label class="icone-coeur">
               <input type='checkbox' class='icone-coeur__selection' name='aime' id='aime_la-note-enchantee'>                
@@ -99,14 +104,16 @@
         </div>
 
 
-        <div class="restaurant__card new">
+        <div class="restaurant__card">
           <a href="./public/pages/alafrancaise.html">
             <img src="./public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant de qualité !"/>
           </a>
           <div class="restaurant__description">
             <a href="./public/pages/alafrancaise.html" class="restaurant__text">
-              <h2>A la française</h2>
-              <p>Cité Rouge</p>
+              <div>
+                <h2>A la française</h2>
+                <p>Cité Rouge</p>
+              </div>              
             </a>
             <label class="icone-coeur">
               <input type='checkbox' class='icone-coeur__selection' name='aime' id='aime_la-note-francaise'>                
@@ -116,14 +123,16 @@
           </div>
         </div>
 
-        <div class="restaurant__card new">
+        <div class="restaurant__card">
           <a href="./public/pages/ledelicedessens.html">
             <img src="./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant de qualité !"/>
           </a>
           <div class="restaurant__description">
             <a href="./public/pages/ledelicedessens.html" class="restaurant__text">
-              <h2>Le délice des sens</h2>
-              <p>Folie-Méricourt</p>
+              <div>
+                <h2>Le délice des sens</h2>
+                <p>Folie-Méricourt</p>
+              </div>              
             </a>
             <label class="icone-coeur">
               <input type='checkbox' class='icone-coeur__selection' name='aime' id='aime_le-delice-des-sens'>                
@@ -133,31 +142,6 @@
           </div>
         </div>
 
-
-
-
-        <!--
-       <a href="./public/pages/ledelicedessens.html" class="restaurant__card">
-          <img src="./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant de qualité !"/>
-          <div class="restaurant__description">
-            <div class="restaurant__text">
-              <h2>Le délice des sens</h2>
-              <p>Folie-Méricourt</p>
-            </div>
-            <label class="icone-coeur">
-              <input type='checkbox' class='icone-coeur__selection' name='aime' id='aime_le-delice-des-sens'>                
-              <i class="fa-heart fas"></i>
-              <i class="fa-heart far"></i>
-          </label>
-          </div>
-        </a>
-
-
-
-        -->
-        
-      
-       
       </div>
     </section>   
   </main>

@@ -27,7 +27,7 @@
   flex-grow: 1; /* définit le facteur d'expansion d'un élément flexible selon sa dimension principale  */
   padding: 1.5rem 0;
   width: 100%;
-  @include ombre-conteneur;
+  @include ombre-conteneur; /* rajoute l'ombre  */
   &:hover { /* au survole  */
     transition: all 380ms ease-in; /*  la transition commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée  */
     @include bouton-clair; /* couleur plus claire   */
@@ -44,11 +44,11 @@
     width: 1.5rem;
     height: 1.5rem;
     background-color: $couleur-primaire;
-    border-radius: 50%;
+    border-radius: 50%; /* la bordure forme un cercle  */
     @include centrer_flex;       
   }
   & i { /* icône */
-    color: darken($ombre-arrondie, $amount: 10); /* gris plus foncé  */
+    color: darken($ombre-arrondie, $amount: 10); /* couleur plus foncé  */
     padding: 0 1rem;
     font-size: $h1-taille;
   }

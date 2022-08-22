@@ -15,7 +15,8 @@
     /* Au survol, la couleur de fond du bouton s’éclaircie  légèrement.
     L’ombre portée est plus visible. */
      &:hover {
-        @include hover-btn;
+        @include hover-btn;  /* Au survol, la couleur de fond du bouton s’éclaircie 
+         légèrement. L’ombre portée est plus visible. */
     }
   }
 

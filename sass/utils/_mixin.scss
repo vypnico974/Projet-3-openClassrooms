@@ -6,14 +6,16 @@
 @mixin bouton-clair($color:$couleur-primaire) {
     background-color: lighten($color: $couleur-primaire, $amount: 25%)
 }
+
  /* couleur dégradée de 2 couleurs exprimées en pourcentage de l'arrière-plan    */  
 @mixin gradient($degree) {
   background: $couleur-primaire;
   background:linear-gradient(($degree), $couleur-primaire 25%, $couleur-secondaire 100%);
 }
-@mixin bouton-nouveau {
+
+@mixin bouton-nouveau { /* cadre nouveau sur les photos  */
   content: 'Nouveau';
-  position: absolute;
+  position: absolute; /* permet de mettre le cadre nouveau sur la photo  */
   padding: 0.5rem;
   font-family: 'Roboto', 'sans-serif';
   font-size: 0.8rem;
@@ -26,23 +28,24 @@
 
 /*  léger décalage dans le temps  */
 @mixin apparaitre-assiette ($listes-assiette,$delais) {
-  @each $liste in $liste-assiettes{
-    &--#{$liste} {
+  @each $liste in $liste-assiettes{ /* pour chaque groupe d'assiettes concernées  */
+    &--#{$liste} { /* le selecteur du groupe d'assiette concernée  */
       opacity: 0;
-      animation: apparaitre 0.6s linear $delais+s forwards;           
+      animation: apparaitre 0.6s linear $delais+s forwards;  /* forwards : la cible retiendra les valeurs calculées définies lors de la dernière étape  */        
       $delais : $delais + 1;
      
     }
   }
 }
+
 /* les plats apparaissent un par un  */
 @mixin boucle_repas($liste-repas) {
   @each $valeur in $liste-repas {
-    .repas__#{$valeur} { 
+    .repas__#{$valeur} { /* pour chaque "partie" du menu concerné  */
         @media screen and (width>2100px){
         min-height: 250px;
       }      
-      @include conteneur-ligne;
+      @include conteneur-ligne; /* positionnement sur un ou plusieurs lignes si besoin  */
       opacity: 0; 
       @include margin;
       @include pad;
@@ -51,13 +54,13 @@
         height: 80px;
         @include margin;
         @include pad;
-        @include choix;
+        @include choix; /* dimension  des conteneurs choix de la composition du menu  */
         @media screen and (min-width: $ordinateur){
           width: 30vw;
         }        
       }             
       @if ($valeur == "entree") {             
-          @include conteneur-ligne;
+          @include conteneur-ligne; /* positionnement sur un ou plusieurs lignes si besoin  */
              @media screen and (max-width: $tablet-smarphone){
               height: 250px; 
             }               
@@ -77,19 +80,18 @@
         @media screen and (min-width: $ordinateur){
           height: 85px;
         }          
-      } 
-     
+      }      
     }
   } 
 }
 
-@mixin choix{
+@mixin choix{ /* dimension  des conteneurs choix de la composition du menu  */
   width: 93vw;
   height: 68px; 
   display: flex;
  
 }
-@mixin conteneur-ligne {
+@mixin conteneur-ligne { /* positionnement sur un ou plusieurs lignes si besoin  */
   display: flex;
   flex-flow: row wrap;  /* en ligne, passe sur une nouvelle ligne si besoin */ 
   justify-content: space-around;
@@ -103,6 +105,7 @@
   justify-content:center;
   align-items:center;
 }
+
  /* Au survol, la couleur de fond du bouton s’éclaircie  légèrement.
     L’ombre portée est plus visible. */
 @mixin hover-btn {

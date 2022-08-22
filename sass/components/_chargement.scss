@@ -7,16 +7,16 @@
   background-color: $couleur-blanc;
   @each $valeur, $taille, $couleur, $duree
    in zip($liste-couleur-titre, $liste-taille-cercle, $liste-couleur, $liste-duree-cercle)  {
-    &__cercle--#{$valeur} {
+    &__cercle--#{$valeur} {/* pour chaque selecteur cercle concerné  */
       border-radius: 7rem;
       position: absolute; 
       margin:auto;
       border: 0.5rem solid transparent;
-      width: $taille;
-      height: $taille;
-      border-top-color: $couleur;
-      border-bottom-color: $couleur;
-      animation: tourner $duree linear infinite; 
+      width: $taille; /* largeur cercle différent pour chaque cercle  */
+      height: $taille; /* hauteur cercle différent pour chaque cercle  */
+      border-top-color: $couleur; /* couleur cercle différent pour chaque cercle  */
+      border-bottom-color: $couleur; /* couleur cercle différent pour chaque cercle  */
+      animation: tourner $duree linear infinite; /* cercles qui tournent  */
     }
   }
 } 
